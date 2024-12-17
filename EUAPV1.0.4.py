@@ -1,3 +1,4 @@
+Pathset = None
 import os
 #EUAP V1.0.3
 FileDir = os.getcwd()
@@ -5,6 +6,9 @@ import sqlite3
 import os
 DBName = "EUAP.db"
 SetName = "Settings.db"
+def Initialise(Path)#sets Path to there
+    Pathset = Path
+    os.chdir(Pathset)
 def Add_User(Username, Password, UserPath):
     conn = sqlite3.connect(DBName)
     c = conn.cursor()
